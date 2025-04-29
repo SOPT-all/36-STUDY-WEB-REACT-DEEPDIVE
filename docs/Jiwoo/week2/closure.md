@@ -1,5 +1,4 @@
 # Chapter 1 리액트 개발을 위해 꼭 알아야 할 자바스크립트
-<hr style="background-color: rgb(157, 196, 221);">
 
 ## 1.4 클로저
 
@@ -11,9 +10,7 @@
 함수 컴포넌트의 구조와 작동 방식, 훅(Hook)의 원리, 의존성 배열 등 함수 컴포넌트의 대부분 기술은 모두 클로저에 기반하고 있다.
 
 ➡️ 함수 컴포넌트를 잘 작성하기 위해서는 클로저에 대한 이해가 필수적임!
-
-<hr style="height: 2px;">
-
+<br>
 
 ### 클로저에 대한 MDN 정의
 
@@ -22,8 +19,7 @@
 
 리액트 16.8 버전 이후 함수 컴포넌트와 훅(Hook)이 등장하면서,  
 클로저를 이해하지 않고는 리액트를 제대로 이해할 수 없게 되었다.
-
-<hr style="height: 2px;">
+<br>
 
 ### 어휘적 환경 (Lexical Environment)
 
@@ -57,13 +53,12 @@ add();
 - 이는 `this`처럼 호출 방식에 따라 동적으로 결정되는 것이 아니라, **코드 작성 시 정적으로 결정된다**.
 - **클로저란 이러한 어휘적 환경을 조합해 코딩하는 기법**이다.
 
-<hr style="height: 3px; background-color: rgb(245, 175, 175);">
+---
 
 ## 1.4.2 변수의 유효범위, 스코프
 
 변수의 유효 범위를 **스코프(scope)** 라고 하며, 자바스크립트에는 다양한 스코프가 존재한다.
-
-<hr style="height: 2px;">
+<br>
 
 ### 전역 스코프 (Global Scope)
 
@@ -89,8 +84,7 @@ console.log(global === window.global); // true (브라우저 환경 기준)
 ```
 
 `var`로 선언된 `global` 변수가 전역 스코프와 `hello` 함수 내부 모두에서 접근 가능함을 알 수 있다.
-
-<hr style="height: 2px;">
+<br>
 
 ### 함수 레벨 스코프 (Function Scope)
 
@@ -108,8 +102,7 @@ console.log(global === window.global); // true
 ```
 
 - `var global`은 `{}` 블록 안에서 선언됐지만, 바깥에서도 접근이 가능하다.
-
-<hr style="height: 2px;">
+<br>
 
 ### 함수 내부에서는?
 
@@ -128,8 +121,7 @@ console.log(local); // Uncaught ReferenceError: local is not defined
 - 함수 외부에서는 접근할 수 없다.
 
 단순한 `if` 블록과는 다르게, **함수 블록** 안에서는 우리가 예상하는 대로 스코프가 구분된다.
-
-<hr style="height: 2px;">
+<br>
 
 ### 스코프의 중첩
 
@@ -162,7 +154,7 @@ foo();
 
 이처럼 **스코프 체인(Scope Chain)** 에 따라 가장 가까운 스코프에 선언된 변수를 우선 사용하게 된다.
 
-<hr style="height: 3px; background-color: rgb(245, 175, 175);">
+---
 
 ## 1.4.3 클로저의 활용
 
@@ -185,8 +177,7 @@ innerFunction(); // at sopt
 - 반환한 함수에는 `x`라는 변수가 존재하지 않지만, 해당 함수가 선언된 어휘적 환경, 즉 `outerFunction`에는 `x`라는 변수가 존재하며 접근할 수도 있음
 
 ➡️ 같은 환경에서 선언되고 반환된 `innerFunction`은 `x` 변수가 존재하던 환경을 기억하기 때문에 정상적으로 "at sopt"를 출력할 수 있는 것이다.
-
-<hr style="height: 2px;">
+<br>
 
 ### 전역 스코프와 클로저
 
@@ -234,8 +225,7 @@ console.log(c.increase()); // 3
 console.log(c.decrease()); // 2
 console.log(c.counter());  // 2
 ```
-
-<hr style="height: 2px;">
+<br>
 
 ### 클로저 활용의 장점
 - `counter` 변수를 직접 노출하지 않아 무분별한 수정을 방지함
@@ -243,16 +233,14 @@ console.log(c.counter());  // 2
 - 변수 업데이트를 `increase`와 `decrease`로 제한해 의도하지 않은 변경을 방지함
 
 ✔️ 이처럼 클로저를 활용하면 전역 스코프 사용을 막고, 필요한 정보만 안전하게 노출할 수 있다!
-
-<hr style="height: 2px;">
+<br>
 
 ### 리액트에서의 클로저
 
 - `useState`를 통해 변수를 저장하고,  
 - `useState` 변수의 접근 및 수정 또한 클로저 내부에서 이루어진다.  
 - 값이 변할 때마다 렌더링 함수를 호출하는 등 다양한 처리가 가능하다.
-
-<hr style="height: 2px;">
+<br>
 
 ### useState와 클로저
 
@@ -281,7 +269,7 @@ function Component() {
 외부 함수(`useState`)가 반환한 내부 함수(`setState`)는 외부 함수 호출이 끝난 후에도  
 자신이 선언된 환경(`state` 값이 저장된 메모리 공간)을 기억하고 접근할 수 있다.
 
-<hr style="height: 3px; background-color: rgb(245, 175, 175);">
+---
 
 ## 1.4.4 주의할 점
 
@@ -341,8 +329,7 @@ for (var i = 0; i < 5; i++) {
 
 - for 문 내부에서 **즉시 실행 함수(IIFE)** 를 사용하여 `i` 값을 고정한다.
 - `sec`이라는 고유한 변수를 만들어서 콜백이 참조하도록 한다.
-
-<hr style="height: 2px;">
+<br>
 
 ### 클로저의 비용
 
@@ -397,7 +384,7 @@ bButton.addEventListener('click', function () {
 - 일반 함수는 메모리 사용량 변화가 적음
 - 클로저 함수는 약 40MB 크기의 배열이 프로그램 시작 시 메모리에 상주
 
-<hr style="height: 3px; background-color: rgb(245, 175, 175);">
+---
 
 ## 1.4.5 정리
 
