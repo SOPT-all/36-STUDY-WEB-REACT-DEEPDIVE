@@ -56,6 +56,6 @@ AT SOPT 36기 리액트 심화 스터디
 | 5월 6일 | Week2  | 딥다이브        | 리액트 핵심 요소<br>(ex : JSX 동작원리, virtual DOM, React fiber) | 임지수          |
 | 5월 13일 | Week3  | 딥다이브        | 리액트 훅 깊게 살펴보기<br>(ex : useState ~memo, callback 등) | 이재림, 엄지우          |
 | 5월 20일 | Week4  | 리액트 심화        | 서버 사이드 렌더링<br>(ex : 리액트 API, CSR & SSR) | 김정은  , 장정훈        |
-| 5월 27일 | Week5  | 리액트 심화        | 자유 주제 | 곽지욱          |
+| 5월 27일 | Week5  | 리액트 심화        | 자유 주제 | 곽지욱 , 김정은         |
 | 6월 3일 | Week6  | 리액트 심화        | 리액트 컴포넌트 패턴<br>(ex : Compound Pattern) | 김예지, 황인영          |
 | 6월 10일 | Week7  | 딥다이브        | Next.js 와 리액트<br>(ex : 리액트 서버 컴포넌트) | 고제성          |
