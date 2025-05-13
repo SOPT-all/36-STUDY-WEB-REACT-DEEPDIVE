@@ -43,6 +43,7 @@ const withLogger = (Component) => {
     return <Component {...props} />;
   };
 };
+```
 
 위 코드처럼 컴포넌트도 함수로 보고 조작할 수 있는 이유가 결국 컴포넌트가 함수이기 때문이에요
 
