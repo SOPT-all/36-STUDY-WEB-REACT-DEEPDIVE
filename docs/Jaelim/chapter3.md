@@ -19,7 +19,7 @@ DOM 트리 구성을 위해서 스타일 속성을 계산하는거
 
 # React 렌더링 과정을 알아보자!
 
-![image.png](attachment:70c32fb5-5f7c-4688-acb4-8b872f01b625:image.png)
+![image](https://github.com/user-attachments/assets/3ff1dcfb-08f4-4c2b-a57c-a662d79fa079)
 
 <aside>
 💫
@@ -62,7 +62,7 @@ DOM 트리 구성을 위해서 스타일 속성을 계산하는거
 
 페인트 이후에 실행해서, useEffect 함수 내부에 DOM 영향 주는게 있으면 깜박이기도함
 
-![img.gif](attachment:8097e849-f4c5-4c12-8109-732fc3da3056:img.gif)
+![img](https://github.com/user-attachments/assets/e61b509c-d1e9-459e-af88-b924654a963e)
 
 ⇒ 화면자체가 다 그려진 상태에서, useEffect 내에서 DOM을 조작하게 됐을 때
 
@@ -76,7 +76,7 @@ DOM 트리 구성을 위해서 스타일 속성을 계산하는거
 
 ### 렌더 이후에 실행되고, 그 이후에! 페인트 이루어짐! 동기적!
 
-![image.png](attachment:1ca14a2b-7832-48e0-bf55-e5d453f05283:image.png)
+![image](https://github.com/user-attachments/assets/bb543513-83da-45ea-b45f-108a4a6304d9)
 
 페인트되기전에, useLayoutEffect 상 로직 작동하니까, 화면 상 깜박임을 겪지는 않음
 
@@ -105,12 +105,12 @@ const Test = (): JSX.Element => {
 useEffect 사용하면, 처음에 0이 보여지고 이후에 리렌더링 되면서 화면이 깜빡거려지기 때문에 useLayoutEffect 를 사용추천!
 
 ### useEffect
+![1](https://github.com/user-attachments/assets/1ed7d27b-566c-47ab-b8a4-c2d09bda83e0)
 
-![1.gif](attachment:79fa9b66-adce-44ab-bd38-0a1ce35b108f:1.gif)
 
 ### useLayoutEffect
+![2](https://github.com/user-attachments/assets/dc4a082c-4e94-4ee0-9b44-87d298c11ae3)
 
-![2.gif](attachment:6db952de-b7dc-46f7-b8ac-3645bffbd554:2.gif)
 
 # 언제 씀?
 
