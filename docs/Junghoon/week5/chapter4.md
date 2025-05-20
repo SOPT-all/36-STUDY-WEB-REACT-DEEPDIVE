@@ -198,7 +198,7 @@ const rootElement = document.getElementById("root");
 ReactDOM.hydrate(<App />, rootElement);
 ```
 
-서버에서 제공받은 HTML에 App 컴포넌트에 있는 것과 마찬가지로 <span/>이 있기를 기대했지만 이 요소가 없다는 경고 문구가 출력됩니다. 이는 hydrate가 서버에서 제공해 준 HTML이 클라이언트의 결과물과 같을 것이라는 가정하에 실행된다는 것을 의미합니다. 이 예제를 기준으로 설명하면, rootElement 내부에는 <App />을 렌더링한 정보가 이미 포함돼 있어야만 hydrate를 실행할 수 있다는 것을 의미합니다.
+서버에서 제공받은 HTML에 App 컴포넌트에 있는 것과 마찬가지로 `<span/>`이 있기를 기대했지만 이 요소가 없다는 경고 문구가 출력됩니다. 이는 hydrate가 서버에서 제공해 준 HTML이 클라이언트의 결과물과 같을 것이라는 가정하에 실행된다는 것을 의미합니다. 이 예제를 기준으로 설명하면, rootElement 내부에는 `<App />`을 렌더링한 정보가 이미 포함돼 있어야만 hydrate를 실행할 수 있다는 것을 의미합니다.
 따라서 hydrate로 넘겨준 두 번째 인수에는 이미 renderToString 등으로 렌더링된 정적인 HTML 정보가 반드시 담겨 있어야 합니다. 아무것도 없는 빈 HTML에 이 정보를 렌더링하는 render와의 차이점이 바로 이것입니다.
 
 </details>
