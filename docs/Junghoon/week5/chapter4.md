@@ -106,7 +106,7 @@ const result = ReactDOMServer.renderToStaticMarkup(
 ## 4.2.3 renderToNodeStream
 
 - renderToNodeStram은 renderToString과 결과물이 완전히 동일하지만 두 가지 차이점이 있습니다.
-  - 앞에서 살펴본 두 API는 브라우저에서도 실행할 수 있지만 renderToNodeStream은 브라우저에서 사용하는 것이 브라우저 환경에서는 사용할 수 없습니다. 이유는 Node.js 런타임에서만 동작하고 있기 때문입니다.
+  - 앞에서 살펴본 두 API는 브라우저에서도 실행할 수 있지만 renderToNodeStream은 브라우저 환경에서 사용할 수 없습니다. 이유는 Node.js 런타임에서만 동작하고 있기 때문입니다.
   - 두 번째 차이점은 결과물의 타입입니다. renderToString은 이름에서도 알 수 있듯이 결과물이 string인 문자열이지만, renderToNodeStream의 결과물은 Node.js의 ReadableStream입니다. ReadableStream은 utf-8로 인코딩된 바이트 스트림으로 Node.js나 Deno, Bun 같은 서버 환경에서만 사용할 수 있습니다.
 
 ### renderToNodeStream을 사용해야하는 이유?
